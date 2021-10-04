@@ -56,7 +56,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         shell: bash
 
-   deploy:
+  deploy:
     runs-on: ubuntu-latest
     name: Deploy the JAR file to the remote server
     needs: build
@@ -87,3 +87,4 @@ jobs:
           pass: ${{ secrets.SSH_PASSWORD }}
           args: "-tt"
           # The & in the command runs the process on background
+
